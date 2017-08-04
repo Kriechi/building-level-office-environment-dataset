@@ -1,0 +1,15 @@
+[Unit]
+Description=MEDAL Data Collector
+RequiresMountsFor=/srv /srv/energy-daq/storage
+
+[Service]
+Type=simple
+ExecStart=/energy-daq/collector.py
+WorkingDirectory=/energy-daq
+Restart=always
+RestartSec=30
+StartLimitAction=reboot
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

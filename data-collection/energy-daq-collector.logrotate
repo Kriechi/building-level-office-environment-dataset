@@ -1,0 +1,7 @@
+/energy-daq/storage/logs/*.log {
+  compress
+  weekly
+  delaycompress
+  missingok
+  rotate 104
+}
